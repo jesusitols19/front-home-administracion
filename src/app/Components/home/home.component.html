@@ -1,0 +1,192 @@
+<div class="container-fluid px-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 shadow sticky-top">
+        <a class="navbar-brand logo-ocultar" >
+  <img src="Images/Nombrelogo.webp" alt="NEXUSERV" class="img-fluid logo-responsive" />
+</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container px-3">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-clickable" (click)="scrollTo('inicio')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-clickable" (click)="scrollTo('quienessomos')">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-clickable" (click)="scrollTo('cliente')">Cliente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-clickable" (click)="scrollTo('especialista')">Especialista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-white py-5 home-background" id="inicio">
+        <div class="container px-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-xl-5 col-xxl-6 text-center d-flex justify-content-center">
+                    <img class="img-fluid logo-responsive2 rounded-3 my-5" src="/Images/logo.webp" alt="yo" />
+
+                </div>
+                <div class="col-lg-8 col-xl-7 col-xxl-6 d-flex flex-column justify-content-center">
+                    <div class="my-5 text-center">
+                        <h1 class="fw-bold mb-2">¡Bienvenido a Nexuserv!</h1>
+                        <p class="lead mb-4">
+                            Donde la tecnología conecta soluciones en el sector retail de
+                            Sodimac.
+                        </p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-center">
+                            <button class="btn btn-light">Descargar apk</button>
+                            <button class="btn btn-outline-light" routerLink="/FormularioPostulante">Postula aquí</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-5 text-center" id="quienessomos">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold">¿Quiénes somos?</h2>
+                    <p class="mb-5 lead">
+                        Somos un equipo que comprometido con conectar a las personas que necesitan soluciones en su hogar con maestros especialistas de confianza. Creemos en la virilización del talento de pintores, electricistas, carpinteros y más asegurándonos que la calidad de su trabajo sea el adecuado y que sean personas de confianza.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <section class="py-5 text-center" id="cliente">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold">Como Cliente</h2>
+                    <p class="mb-5 lead">
+                        Como cliente, tienes el control de encontrar la solución que necesitas para tu hogar.<br />
+                        Desde nuestra plataforma puedes:
+                    </p>
+                    <ul class="lead text-start mx-auto" style="max-width: 600px;">
+                        <li>Solicitar el servicio que necesitas en pocos pasos</li>
+                        <li>Elegir el especialista ideal según su perfil y valoración</li>
+                        <li>Coordinar fechas según su disponibilidad</li>
+                        <li>Realizar el metodo de pago sea por débito, credito o yape</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+        <section class="py-5 text-white text-center home-background">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold">¿Cómo solicitar un servicio?</h2>
+                </div>
+            </div>
+
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                 @for (card of cardComoSolicitar; track $index) {
+                    <div class="col-12 col-sm-6 col-lg-4 mb-5 d-flex r">
+                        <div class="card h-100 shadow-lg border-0 w-100 d-flex flex-column" >
+                            <img class="card-img-top card-img-fixed" [src]="card.img" alt="imagen {{card.titulo}} "(click)="abrirModal(card)" data-bs-toggle="modal" data-bs-target="#detalleCardModal" />
+                            <div class="card-body p-4">
+                                <p class="card-text">{{card.idComoSolicitar}}. {{card.texto}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="py-5 text-center" id="especialista">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold">Como Especialista</h2>
+                    <p class="mb-5 lead">
+                       ¿Eres pintor, electricista, gasfitero, carpintero u otro especialista en mejoras del hogar? ¡Esta es tu oportunidad para llegar a más clientes y hacer crecer tu trabajo! Postular es muy sencillo:
+                    </p>
+                    <ul class="lead text-start mx-auto" style="max-width: 600px;">
+                        <li>Haz clic en Registrar</li>
+                        <li>Completa tus datos personales, experiencia y servicios que ofreces.</li>
+                        <li>¡Listo! Solo debes esperar un correo de confirmación por parte del equipo administrador.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="py-5 text-white text-center home-background">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold">¿Cómo Postular?</h2>
+                </div>
+            </div>
+
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                    @for (card of cardComoPostular; track $index) {
+                        <div class="col-12 col-sm-6 col-lg-4 mb-5 d-flex">
+                            <div class="card h-100 shadow-lg border-0  w-100 d-flex flex-column">
+                                <img class="card-img-top card-img-fixed" [src]="card.img" alt="Imagen {{card.titulo}}"(click)="abrirModal(card)" data-bs-toggle="modal" data-bs-target="#detalleCardModal" />
+                                <div class="card-body p-4">
+                                    <p class="card-text">{{card.idComoPostular}}. {{card.texto}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button class="btn btn-light" routerLink="/FormularioPostulante">Postula aquí</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class=" py-5 text-center">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold">¿Listo Para Comenzar</h2>
+                    <p class="mb-5 lead">
+                        Únete a Nexuserv y forma parte de la revolución en la contratación de servicios especializados.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" text-white text-center py-5 container-fluid w-100 h-100" style="background-color:#111827">
+        <div class="container">
+          <div class="text-center">
+            <h6>Nexuserv</h6>
+          </div>
+          <p>Conectando soluciones tecnológicas con quienes las necesitan.</p>
+        </div>
+        <hr>
+      <p class="mt-3 mb-0">©2025 Nexuserv. Todos los derechos reservados.</p>
+    </footer>
+    
+</div>
+<!-- Modal -->
+<div class="modal fade" id="detalleCardModal" tabindex="-1" aria-labelledby="detalleCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    @if (selectedCard) {
+      <div class="modal-content text-start">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 text-center" id="detalleCardModalLabel">{{ selectedCard.titulo }}</h5>
+          <button type="button" class="custom-close-btn" aria-label="Cerrar" data-bs-dismiss="modal" (click)="cerrarModal()"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img [src]="selectedCard.img" class="img-fluid mb-3" alt="Imagen {{selectedCard.titulo}}" />
+        </div>
+      </div>
+    }
+  </div>
+</div>

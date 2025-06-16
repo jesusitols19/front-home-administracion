@@ -1,0 +1,51 @@
+<div class="background">
+  <div class="container">
+    <h1>Registrar Nuevo Postulante</h1>
+    <h2>Datos Personales</h2>
+
+    <form [formGroup]="formulario" (ngSubmit)="enviarSolicitud()" enctype="multipart/form-data">
+      <div class="grid">
+        <div>
+          <label for="usuario">Nombre de usuario:</label>
+          <input id="usuario" type="text" formControlName="usuario" />
+        </div>
+        <div>
+          <label for="fechaNacimiento">Fecha de nacimiento:</label>
+          <input id="fecha_nacimiento" type="date" formControlName="fecha_nacimiento" />
+        </div>
+        <div>
+          <label for="nombres">Nombres:</label>
+          <input id="nombres" type="text" formControlName="nombres" />
+        </div>
+        <div>
+          <label for="celular">Celular:</label>
+          <input id="celular" type="text" formControlName="celular" />
+        </div>
+        <div>
+          <label for="apellidos">Apellidos:</label>
+          <input id="apellidos" type="text" formControlName="apellidos" />
+        </div>
+        <div>
+          <label for="dni">DNI:</label>
+          <input id="dni" type="text" formControlName="dni" />
+        </div>
+        <div class="full-width">
+          <label for="correo">Correo:</label>
+          <input id="correo" type="email" formControlName="correo" />
+        </div>
+        <div class="full-width">
+          <label for="cv">Adjuntar CV:</label>
+          <input id="cv" type="file" (change)="onArchivoSeleccionado($event)" accept=".pdf" />
+          <small>Sólo se permiten archivos PDF (.pdf)</small>
+        </div>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" required />
+        <label>Acepto los <a href="#">Términos y Condiciones</a></label>
+      </div>
+
+      <button type="submit">Postular</button>
+    </form>
+  </div>
+</div>
