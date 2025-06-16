@@ -43,7 +43,7 @@ export class FormPostulanteComponent {
     );
     formData.append('cv', this.archivoCV, this.archivoCV.name);
 
-    this.http.post('http://127.0.0.1:8000/postulaciones', formData)
+    this.http.post('https://apinexuserv-ftdtfjdbc9aegrht.brazilsouth-01.azurewebsites.net/postulaciones', formData)
       .subscribe({
         next: () => alert('✅ Postulación enviada con éxito'),
         error: () => alert('❌ Error al enviar postulación')
