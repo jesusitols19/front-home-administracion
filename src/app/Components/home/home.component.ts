@@ -64,13 +64,13 @@ export class HomeComponent {
       idComoSolicitar: 4,
       titulo:'Selecionar especialista',
       img: '/Images/Todas-las-Solicitudes.webp',
-      texto: 'Apareceran los especialistas que aceptaron el servicio, se le notificara con sus datos y deberá aceptar un especialista.'
+      texto: 'Una vez solicitado el servicio deberas esperar a que uno o varios especialistas quieran hacer el trabajo.'
     },
     {
       idComoSolicitar: 5,
       titulo:'Califica al especialista',
-      img: '/Images/Mis-Solicitudes-Calificar.webp',
-      texto: 'Despues de la realizacón de tu servicio calificaras al especialista.'
+      img: '/Images/EstadosDelTrabajo.webp',
+      texto: 'Se muestra el estado actual al realizar un trabajo por especialista'
     },
     {
       idComoSolicitar: 6,
@@ -97,13 +97,13 @@ export class HomeComponent {
       idComoPostular:3,
       titulo:'Accede como especialista',
       img: '/Images/Vista-Solicitud-Especialista.webp',
-      texto:'Revisar la solicitud del cliente y puedes modificar el precio antes de aceptar y programación de tu servicio.'
+      texto:'Revisar la solicitud del cliente antes de aceptar y programación de tu servicio.'
     },
     {
       idComoPostular:4,
       titulo:'Revisa el estado de tu servicio programado',
       img: '/Images/Historial-de-especialistas.webp',
-      texto:'Revisar la solicitud del cliente y puedes modificar el precio antes de aceptar y programación de tu servicio.'
+      texto:'El especialista podrá visualizar el historial de su servicio culminado.'
     }
   ]
 
